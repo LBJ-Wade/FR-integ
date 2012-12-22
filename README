@@ -1,0 +1,40 @@
+A dvode driver, for solving perturbation evolution 
+in WANG Jun & WANG Hao 2012.
+
+hwang.phy@gmail.com
+-----
+ v1.1 2012-Dec-02:
+       1. fiducial values changed, especially, n changed from 0.1 to 0.0001;
+       2. relative errors are modified
+ v1.0 2012-Jul-15
+-----
+ Independent variable is A (eta), the conformal time
+ lower case 'a' is the scale factor
+Y(1) = a
+Y(2) = a'
+Y(3) = a''
+Y(4) = delta
+Y(5) = delta'
+
+The system consists of the following 5 rate
+equations:
+1, YDOT(1) = a' = Y(2)
+2, YDOT(2) = a'' = Y(3)
+3, YDOT(3) = a''' = ...
+4, YDOT(4) = delta' = Y(5)
+5, YDOT(5) = delta'' = ...
+
+All length/time quantities are in unit of Gyr (or Gyr^-1);
+All density quantities are in unit of 8 \pi G * ['normal' density],
+but density appears in formulas only in form of dimensionless \Omega,
+making its actual unit irrelevant;
+
+The initial conditions are *not* trivial, neither (Y)s and A, nor
+(Y')s; 
+Initial value of Y(5) (delta') is set to a' at the same A (eta);
+this is argued to be due to similar behavior of $delta(a)$ in 
+f(R) theory and in LCDM, which seems to be the case in the figures
+shown in the paper. 
+
+Problems to be solved:
+1. A clever way to pick the wanted k (used to plot the growth history)
