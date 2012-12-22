@@ -1,0 +1,20 @@
+#ignored files
+newdiff
+#all .html files
+*.html
+#except readme.html
+#!readme.html
+
+#all lib and object files
+*.[ao]
+*.mod
+#all text files, data files
+*.dat
+
+*.swp
+*.txt
+
+#all figures
+*.eps
+
+#some folders
